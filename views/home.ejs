@@ -1,0 +1,20 @@
+<%- include('header'); -%>
+<h1>Home</h1>
+<p>
+  <%=initial_text%>
+</p>
+
+<%contents.forEach(function(result){%>
+  <h3> <%=result.title%></h3>
+  <p>
+  <%=result.description.slice(0,101) + '...' %>
+  <a href="posts/<%=result.title%>">Read More</a>
+  </p>
+
+
+
+<%})%>
+
+
+
+<%- include('footer'); -%>
